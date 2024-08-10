@@ -16,11 +16,11 @@ Para garantir que o sistema funcione corretamente, a planilha `.xlsx` deve estar
 1. **Folha Única**: A planilha deve conter apenas uma aba (folha). O sistema não processa arquivos com múltiplas abas.
 
 2. **Colunas Obrigatórias**: A planilha deve incluir as seguintes colunas com os nomes exatos:
-   - **Carimbo de Data/Hora**: Registra o carimbo de data e hora da entrada do participante. Esta coluna deve ser intitulada exatamente como `carimbo de data/hora`.
-   - **Nome Completo**: Nome completo do participante. A coluna deve ser intitulada exatamente como `nome completo`.
-   - **Diretoria**: Nome da diretoria à qual o participante pertence. A coluna deve ser intitulada exatamente como `diretoria`.
-   - **Setor**: Setor em que o participante trabalha. A coluna deve ser intitulada exatamente como `setor`.
-   - **Telefone**: Número de telefone do participante. A coluna deve ser intitulada exatamente como `telefone`.
+   - **Carimbo de Data/Hora**: Registra o carimbo de data e hora da entrada do participante. Esta coluna deve ser intitulada exatamente como `Carimbo de data/hora`.
+   - **Nome Completo**: Nome completo do participante. A coluna deve ser intitulada exatamente como `Nome`.
+   - **Diretoria**: Nome da diretoria à qual o participante pertence. A coluna deve ser intitulada exatamente como `Diretoria`.
+   - **Setor**: Setor em que o participante trabalha. A coluna deve ser intitulada exatamente como `Setor`.
+   - **Telefone**: Número de telefone do participante. A coluna deve ser intitulada exatamente como `Telefone`.
 
 3. **Dados Limpios**: Certifique-se de que os dados estejam limpos e formatados corretamente. Evite células vazias nas colunas obrigatórias e remova quaisquer caracteres especiais ou espaços extras.
 
