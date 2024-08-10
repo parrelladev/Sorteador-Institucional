@@ -32,8 +32,6 @@ Para garantir que o sistema funcione corretamente, a planilha `.xlsx` deve estar
 | 2024-08-01 09:00:00  | Maria Oliveira | Recursos Humanos | Administrativo | (11) 98765-4322|
 | 2024-08-01 10:00:00  | Pedro Santos  | TI          | Suporte     | (11) 98765-4323|
 
-Certifique-se de seguir essas diretrizes para garantir que o arquivo seja processado corretamente e o sorteio seja realizado de maneira justa.
-
 ## Como o Sorteio Garante Aleatoriedade
 
 O sistema de sorteio utiliza o algoritmo Fisher-Yates para garantir que a seleção dos ingressos seja completamente aleatória e justa. Aqui está um detalhamento de como isso é alcançado:
