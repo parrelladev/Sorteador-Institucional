@@ -7,7 +7,7 @@ body {
 .container {
     max-width: 600px;
     margin: auto;
-    padding-top: 50px;
+    padding-top: 0px;
 }
 
 img {
@@ -56,7 +56,7 @@ h2.text-style {
 
 #result h4 {
     width: 100%;
-    text-align: center;
+    text-align: left;
     margin-bottom: 20px;
 }
 
@@ -90,4 +90,25 @@ h2.text-style {
 #result ul li {
     width: calc(50% - 10px); /* Ajuste para duas colunas */
     margin: 5px;
+}
+
+/* Estilo para a mensagem de preparação */
+#result.suspense {
+    font-size: 24px;
+    text-align: center;
+    color: #00d26a;
+    animation: pulse 1.5s infinite;
+}
+
+/* Animação para pulsar a mensagem */
+@keyframes pulse {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
 }

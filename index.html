@@ -10,8 +10,9 @@
 </head>
 
 <body>
-    <div class="container mt-5">
-        <img src="img/REDE-GAZETA_negativo.png" alt="Imagem de Recarregar" id="reloadImage" style="cursor: pointer;">
+    <div  class="container mt-5">
+    <img src="img/REDE-GAZETA_negativo.png" alt="Imagem de Recarregar" id="reloadImage" style="cursor: pointer;">
+    <div id="main-container" class="">
         <h2 class="text-style">Sorteador Institucional 🍀</h2>
 
         <!-- Número de Ingressos a Serem Sorteados -->
@@ -29,10 +30,10 @@
 
         <!-- Botão de Processamento -->
         <button class="btn btn-primary" onclick="processFile()">Sortear 🎲</button>
-
-        <!-- Exibição de Resultados ou Erros -->
-        <div id="result" class="mt-4"></div>
     </div>
+    
+    <!-- Exibição de Resultados ou Erros -->
+    <div id="result" class="mt-4"></div>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
     <script src="js/script.js"></script>

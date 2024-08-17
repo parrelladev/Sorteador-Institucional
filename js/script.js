@@ -118,21 +118,46 @@ function sortNames(groupedData, numIngressos) {
     return results;
 }
 
-// Exibe os resultados do sorteio na página.
 function displayResults(sortedNames) {
+    // Oculta o elemento principal
+    const mainContainer = document.getElementById('main-container');
+    if (mainContainer) {
+        mainContainer.style.display = 'none';
+    }
+
+    // Exibe a primeira mensagem de suspense
     const resultDiv = document.getElementById('result');
-    resultDiv.innerHTML = '<h4>Resultado do Sorteio:</h4>';
-    Object.keys(sortedNames).forEach(directorate => {
-        resultDiv.innerHTML += `<h5>${directorate}</h5>`;
-        const ul = document.createElement('ul');
-        sortedNames[directorate].forEach(name => {
-            const li = document.createElement('li');
-            li.textContent = name;
-            ul.appendChild(li);
+    resultDiv.classList.add('suspense');
+
+    resultDiv.innerHTML = '<h2 style="color: #f6b72f; padding: 40px 0px 40px; 0px;">🎲 Misturando os nomes...</h2>';
+
+    // Segunda mensagem após 1 segundo
+    setTimeout(() => {
+        resultDiv.innerHTML = '<h2 style="color: #3498DB; padding: 40px 0px 40px; 0px;">📦 Agitando a caixinha...</h2>';
+    }, 1000);
+
+    // Terceira mensagem após 2 segundos
+    setTimeout(() => {
+        resultDiv.innerHTML = '<h2 style="padding: 40px 0px 40px; 0px;">🤞 Aí vem o resultado...</h2>';
+    }, 2000);
+
+    // Exibe os resultados após 3 segundos
+    setTimeout(() => {
+        resultDiv.classList.remove('suspense');
+        resultDiv.innerHTML = '<h2>🍀 Vencedores do Sorteio:</h2>';
+        Object.keys(sortedNames).forEach(directorate => {
+            resultDiv.innerHTML += `<h5>${directorate}</h5>`;
+            const ul = document.createElement('ul');
+            sortedNames[directorate].forEach(name => {
+                const li = document.createElement('li');
+                li.textContent = name;
+                ul.appendChild(li);
+            });
+            resultDiv.appendChild(ul);
         });
-        resultDiv.appendChild(ul);
-    });
+    }, 5000);
 }
+
 
 // Recarregar Página
 document.getElementById('reloadImage').addEventListener('click', function() {
