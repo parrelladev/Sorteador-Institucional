@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteio de Nomes</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" />
+</head>
+
+<body>
+    <div class="container mt-5">
+        <a href="../index.html"><img src="../img/REDE-GAZETA_negativo.png" alt="Imagem de Recarregar" style="cursor: pointer;"></a>
+        <div id="main-container" class="">
+            <h2 class="text-style">Sorteador Institucional 🍀</h2>
+
+            <!-- Número de Vencedores a Serem Sorteados -->
+            <div class="form-group">
+                <label for="numVencedores">Número de Vencedores:</label>
+                <input type="number" id="numVencedores" class="form-control" placeholder="Digite o número de vencedores" required>
+            </div>
+
+            <!-- Caixa de Texto para Nomes -->
+            <div class="form-group">
+                <label for="namesList">Cole os Nomes (um por linha):</label>
+                <textarea id="namesList" class="form-control" rows="10" placeholder="Cole ou digite os nomes aqui..." required></textarea>
+            </div>
+
+            <!-- Botão de Processamento -->
+            <button class="btn btn-primary" onclick="sortNames()">Sortear 🎲</button>
+        </div>
+
+        <!-- Exibição de Resultados ou Erros -->
+        <div id="result" class="mt-4"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <script  src="../js/fileReader.js"></script>
+        <script src="../js/validation.js"></script>
+        <script src="../js/sortingGeral.js"></script>
+        <script src="../js/ui.js"></script>
+</body>
+
+</html>

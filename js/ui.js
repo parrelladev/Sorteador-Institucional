@@ -18,15 +18,15 @@ function displayResults(sortedNames) {
 
     setTimeout(() => {
         resultDiv.innerHTML = '<h2 style="color: #3498DB; padding: 40px 0px 40px; 0px;">📦 Agitando a caixinha...</h2>';
-    }, 1000);
-
-    setTimeout(() => {
-        resultDiv.innerHTML = '<h2 style="padding: 40px 0px 40px; 0px;">🤞 Aí vem o resultado...</h2>';
     }, 2000);
 
     setTimeout(() => {
+        resultDiv.innerHTML = '<h2 style="padding: 40px 0px 40px; 0px;">🤞 Aí vem o resultado...</h2>';
+    }, 4000);
+
+    setTimeout(() => {
         resultDiv.classList.remove('suspense');
-        resultDiv.innerHTML = '<h2>🍀 Vencedores do Sorteio:</h2>';
+        resultDiv.innerHTML = '<h2>🍀 Resultado do Sorteio:</h2>';
         Object.keys(sortedNames).forEach(directorate => {
             resultDiv.innerHTML += `<h5>${directorate}</h5>`;
             const ul = document.createElement('ul');
@@ -39,7 +39,3 @@ function displayResults(sortedNames) {
         });
     }, 5000);
 }
-
-document.getElementById('reloadImage').addEventListener('click', function() {
-    location.reload();
-});

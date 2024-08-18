@@ -12,36 +12,25 @@
 
 <body>
     <div class="container mt-5">
-        <img src="img/REDE-GAZETA_negativo.png" alt="Imagem de Recarregar" id="reloadImage" style="cursor: pointer;">
+        <a href="index.html"><img src="img/REDE-GAZETA_negativo.png" alt="Imagem de Recarregar"
+                style="cursor: pointer;"></a>
         <div id="main-container" class="">
             <h2 class="text-style">Sorteador Institucional 🍀</h2>
-
-            <!-- Número de Ingressos a Serem Sorteados -->
-            <div class="form-group">
-                <label for="numIngressos">Número de Ingressos por Diretoria:</label>
-                <input type="number" id="numIngressos" class="form-control" placeholder="Digite o número de ingressos"
-                    required>
-            </div>
-
-            <!-- Upload de Arquivo -->
-            <div class="form-group">
-                <label for="fileUpload">Selecione um arquivo com a lista (.xlsx):</label>
-                <input type="file" id="fileUpload" class="form-control-file" accept=".xlsx" required>
-            </div>
-
-            <!-- Botão de Processamento -->
-            <button class="btn btn-primary" onclick="processFile()">Sortear 🎲</button>
+            <h4>Selecione o tipo de sorteio:</h4>
+            <a href="pages/sorteioGeral.html" style="text-decoration: none;">
+                <button class="btn btn-primary">Sorteio Geral</button>
+            </a>
+            <a href="pages/sorteioDiretoria.html" style="text-decoration: none;">
+                <button class="btn btn-primary">Sorteio com várias diretorias</button>
+            </a>
         </div>
-
-        <!-- Exibição de Resultados ou Erros -->
-        <div id="result" class="mt-4"></div>
-
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
-        <script src="js/fileReader.js"></script>
-        <script src="js/validation.js"></script>
-        <script src="js/grouping.js"></script>
-        <script src="js/sorting.js"></script>
-        <script src="js/ui.js"></script>
+    </div>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script  src="../js/fileReader.js"></script>
+    <script src="../js/validation.js"></script>
+    <script src="../js/sorting.js"></script>
+    <script src="../js/sortingNoGroup.js"></script>
+    <script src="../js/ui.js"></script>
 </body>
 
 </html>

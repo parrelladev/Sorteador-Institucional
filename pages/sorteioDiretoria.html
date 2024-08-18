@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sorteador Institucional</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/style.css">
+    <link rel="shortcut icon" href="../img/favicon-32x32.png" />
+</head>
+
+<body>
+    <div class="container mt-5">
+        <a href="../index.html"><img src="../img/REDE-GAZETA_negativo.png" alt="Imagem de Recarregar" style="cursor: pointer;"></a>
+        <div id="main-container" class="">
+            <h2 class="text-style">Sorteador Institucional 🍀</h2>
+
+            <!-- Número de Ingressos a Serem Sorteados -->
+            <div class="form-group">
+                <label for="numIngressos">Número de Ingressos por Diretoria:</label>
+                <input type="number" id="numIngressos" class="form-control" placeholder="Digite o número de ingressos"
+                    required>
+            </div>
+
+            <!-- Upload de Arquivo -->
+            <div class="form-group">
+                <label for="fileUpload">Selecione um arquivo com a lista (.xlsx):</label>
+                <input type="file" id="fileUpload" class="form-control-file" accept=".xlsx" required>
+            </div>
+
+            <!-- Botão de Processamento -->
+            <button class="btn btn-primary" onclick="processFile()">Sortear 🎲</button>
+        </div>
+
+        <!-- Exibição de Resultados ou Erros -->
+        <div id="result" class="mt-4"></div>
+
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+        <script src="../js/fileReader.js"></script>
+        <script src="../js/validation.js"></script>
+        <script src="../js/grouping.js"></script>
+        <script src="../js/sorting.js"></script>
+        <script src="../js/ui.js"></script>
+</body>
+
+</html>
